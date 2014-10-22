@@ -1,0 +1,66 @@
+module.exports = function configBox(){
+    ///////////////////////////////////////
+    // BEGIN EDITING VALUES BELOW THIS LINE
+    ///////////////////////////////////////
+
+    // API CONFIG
+    // PORT: port you wish to run the API on
+    var port = 8080;
+
+    // AMAZON WEB SERVICES CONFIG
+    // BUCKET_BASE_URL: public base url of your bucket
+    var bucket_base_url = 'http://YOUR_URL_HERE/';
+    // BUCKET_NAME: name of bucket that will store your images
+    var bucket_name = 'BUCKET_NAME_HERE';
+    // ACCESS_KEY: IAM user's access key.
+    var access_key = 'YOUR_KEY_HERE';
+    // SECRET_KEY: IAM user's secret key
+    var secret_key = 'YOUR_SECRET_HERE';
+
+    // DATABASE CONFIG
+    // CLIENT: which flavour of sql? requires an additional
+    // npm module to be installed, depending on client
+    // For postgresql, value should be 'pg'. install 'pg' npm module.
+    // For mysql, value should be 'mysql'. install 'mysql' npm module.
+    // For sqlite3, value should be 'sqlite3'. install 'sqlite3' module
+    // See http://knexjs.org/ for more documentation
+    var client = 'pg';
+    // HOST: address of your sql server
+    var host = '127.0.0.1';
+    // DATABASE: name of database to be used. run the script /tools/build_db.js
+    // before running the node server to create tables & relations
+    var db = 'img_gal';
+    // USER: sql user that has access to database
+    var user = 'my_user';
+    // PASSWORD: password for above user
+    var password = 'my_pass';
+
+
+
+    ///////////////////////////////////////
+    // STOP EDITING NOW, YOU'RE ALL DONE!
+    ///////////////////////////////////////
+    return {
+        API: {
+            PORT: port
+        },
+        AWS: {
+            BUCKET_BASE_URL: bucket_base_url
+            S3_CLIENT_CONFIG: {
+                BUCKET: bucket_name,
+                ACCESS_KEY: access_key,
+                SECRET_KEY: secret_key
+            }
+        },
+        // knex wants keys in lowercase
+        DB: {
+            client: client,
+            connection: {
+                host: host,
+                user: user,
+                password: password,
+                database: db
+            }
+        }
+    };
+}

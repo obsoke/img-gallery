@@ -1,0 +1,186 @@
+html {
+    box-sizing: border-box;
+    background-color: #484A4C;
+    font-family: 'Open Sans', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    min-height: 100%;
+    width: 100%;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    color: #FFF;
+    background-color: #484A4C;
+}
+
+.bar-file-name {
+    margin-left: 30px;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+.upload-btn-container {
+    float: right;
+    margin-right: 30px;
+    height: 70px;
+}
+
+.upload-btn {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #699BB3;
+}
+.upload-btn:hover {
+    cursor: pointer;
+}
+
+.upload-txt {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.file-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:25%;
+    margin-top: 70px;
+    background-color: #EEE;
+}
+
+.file-list {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.file-item {
+    list-style: none;
+    height: 25px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-bottom: 3px;
+}
+.file-item:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #00FF00;
+}
+
+.selected {
+    cursor: pointer;
+    color: white;
+    background-color: #7DA1B8;
+}
+
+
+.filename {
+    line-height: 25px;
+}
+
+.filetype {
+    margin: 0 10px;
+    font-size: smaller;
+    font-weight: 600;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.delete {
+    font-weight: 600;
+    line-height: 25px;
+}
+.delete:hover {
+    color: #FF0000;
+}
+
+.image-window {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 70px;
+    margin-left: 25%;
+    left: 5px; /* gutter */
+    color: #FFF;
+    background-color: #161819;
+}
+
+.image-container {
+    height: 100%;
+}
+
+.fr {
+    float: right;
+}
+
+#hidden-file-input {
+    display: none;
+}
+
+@media screen and (max-width: 730px), (-webkit-min-device-pixel-ratio: 2.0) and (orientation: potrait) {
+    .top-bar{
+        position: relative;
+        width: 100%;
+    }
+
+    .bar-file-name {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    .upload-btn-container {
+        margin: 0 10px;
+    }
+
+    .upload-txt {
+        display: none;
+    }
+
+    .file-bar{
+        margin: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .image-window{
+        left: 0;
+        margin: 0;
+        position: relative;
+        height: 300px;
+    }
+
+    .image-container {
+        background-size: contain;
+    }
+}

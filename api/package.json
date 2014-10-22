@@ -1,0 +1,15 @@
+{
+  "name": "img-gal-api",
+  "version": "1.0.0",
+  "description": "RESTful api for image gallery",
+  "main": "server.js",
+  "author": "Dale Karp <dale@dale.io>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.0.19",
+    "bookshelf": "^0.7.7",
+    "knex": "^0.7.3",
+    "pg": "^3.5.0",
+    "restify": "^2.8.3"
+  }
+}

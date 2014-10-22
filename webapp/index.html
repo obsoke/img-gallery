@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <!-- build:css style/style.css -->
+    <link rel="stylesheet" href="lib/backbone.modal/backbone.modal.css">
+    <link rel="stylesheet" href="lib/backbone.modal/backbone.modal.theme.css">
+    <link rel="stylesheet" href="style/style.v1.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div class="container clearfix">
+    <div class="top-bar">
+    </div>
+
+    <div class="image-window">
+        <div class="image-container"></div>
+    </div>
+
+    <div class="file-bar">
+        <ul class="file-list">
+        </ul>
+    </div>
+    <div class="modal"></div>
+</div>
+
+<!-- build:js js/lib.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+<script src="lib/backbone.modal/backbone.modal.js"></script>
+<script src="bower_components/handlebars/handlebars.runtime.js"></script>
+<script src="bower_components/s3upload-coffee-javascript/s3upload.js"></script>
+<!-- endbuild -->
+
+<!-- build:js1 js/app.js -->
+<script src="templates/templates.js"></script>
+<script src="models/image.js"></script>
+<script src="collections/images.js"></script>
+<script src="views/AppView.js"></script>
+<!-- endbuild -->
+</body>
+</html>
